@@ -1,0 +1,8 @@
+.DS_Store
+.nvmrc
+.editorconfig
+
+Thumbs.db
+
+node_modules
+dist

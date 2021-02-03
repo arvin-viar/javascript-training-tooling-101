@@ -1,0 +1,17 @@
+{
+  "name": "tooling-101",
+  "version": "1.0.0",
+  "description": "Tooling Basics",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ls -a",
+    "build:css": "node-sass src/sass/main.scss dist/css/main.css",
+    "watch:css": "node-sass -w -r src/sass/main.scss dist/css/main.css"
+  },
+  "author": "Arvin Viar (@arvin-viar) <arvin.viar@codeandtheory.com>",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
