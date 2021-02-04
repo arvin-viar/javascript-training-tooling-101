@@ -13,6 +13,7 @@ ul, ol, li {
 a {
     color: $active-color;
     text-decoration: none;
+    
     &:hover {
         color: $highlight-color;
     }
