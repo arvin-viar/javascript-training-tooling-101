@@ -11,21 +11,22 @@
 <body>
 
     <main role="main">
-        <aside>
-            <img class="preloader" src="./src/images/loader.gif" alt="">
+        <aside class="preload-wrap">
+            <img class="loader" src="./src/images/loader.gif" alt="">
         </aside>
 
         <section class="posts">
-            <header class="post-options">
+            <header class="posts__options">
                 <select name="sort" class="post-sort">
-                    <option value="asc">Alpha Asc</option>
-                    <option value="desc">Alpha Desc</option>
+                    <option value="none">Sort Posts</option>
+                    <option value="alphaAsc">Alphabetically Ascending</option>
+                    <option value="alphaDesc">Alphabetically Descending</option>
                 </select>
-                <select name="filter" class="post-filter">
-                    <option value="userId">userName</option>
+                <select name="filter" class="post-filter" disabled>
+                    <option value="all">Select User</option>
                 </select>
             </header>
-            <ul class="posts">
+            <ul class="posts__list">
 
             </ul>
         </section>

@@ -1,4 +1,4 @@
 # Tooling 101
-## February 3, 2021
+## Date Start: February 3, 2021
 
-## Usage Instructionss
+## Usage Instructions
