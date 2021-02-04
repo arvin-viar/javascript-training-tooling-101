@@ -1,4 +1,8 @@
-//  On load, fetch blog post
+const apiDomain = 'https://jsonplaceholder.typicode.com';
+const api = {
+    'posts': '/posts',
+    'users': '/users'
+}
 const posts = [];
 const users = [];
 let filteredPosts = [];
@@ -8,7 +12,6 @@ const selectSort = document.querySelector('.post-sort');
 const selectFilter = document.querySelector('.post-filter');
 
 function renderPosts(postsData) {
-    console.log(postsData);
     const postsHTML = postsData.map(post => {
         return `
             <li class="posts__list-item">
@@ -30,7 +33,6 @@ function setUserOptions() {
 }
 
 function sortPosts() {
-    //disable first option
     selectSort.children[0].disabled = true;
     const sortOption = selectSort.value;
     switch (sortOption) {
@@ -51,19 +53,17 @@ function filterPosts() {
     filteredPosts = [...posts];
     const filterOption = this.selectedOptions[0].value;
     const sortValue = selectSort.value;
-
     if (filterOption !== 'all') {
         filteredPosts = filteredPosts.filter(post => post.userId === parseInt(filterOption));
     }
-    
     if (sortValue !== 'none') {
         sortPosts();
     }
-
     renderPosts(filteredPosts);
 }
 
-fetch('https://jsonplaceholder.typicode.com/posts')
+// Fetch Data
+fetch(`${apiDomain}${api.posts}`)
     .then(response => response.json())
     .then(data => {
         posts.push(...data);
@@ -72,7 +72,7 @@ fetch('https://jsonplaceholder.typicode.com/posts')
         renderPosts(posts);
     });
     
-fetch('https://jsonplaceholder.typicode.com/users')
+fetch(`${apiDomain}${api.users}`)
     .then(response => response.json())
     .then(data => {
         users.push(...data);
@@ -80,17 +80,6 @@ fetch('https://jsonplaceholder.typicode.com/users')
         setUserOptions(users);
     });
 
-// While fetching, show loader icon
-
-// Once blog post loaded, render into the DOM
-
-// Show sorting and filtering options
-
-// Make the sorting function work
+// Event Listeners
 selectSort.addEventListener('change', sortPosts);
-
-// Make the filtering function work
-// -> get the names of the users
-// -> get/set user options
-// -> filter posts by selected user
 selectFilter.addEventListener('change', filterPosts);
