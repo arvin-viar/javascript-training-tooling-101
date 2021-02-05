@@ -1,4 +1,6 @@
 import { 
+        $,
+        $$,
         isMobile,
         renderArticlePosts,
         setOptions,
@@ -15,10 +17,10 @@ const api = {
 const posts = [];
 const users = [];
 let filteredPosts = [];
-const articleLoader = document.querySelector('.article__list-loader');
-const postsContainer = document.querySelector('.articles__list');
-const selectSort = document.querySelector('.post-sort');
-const selectFilter = document.querySelector('.post-filter');
+const articleLoader = $('.article__list-loader');
+const postsContainer = $('.articles__list');
+const selectSort = $('.post-sort');
+const selectFilter = $('.post-filter');
 
 function sortPosts() {
     const sortType = selectSort.value;
@@ -78,7 +80,7 @@ if (selectFilter) {
 
 //Home Featured Posts
 const featuredData = [];
-const featuredContainer = document.querySelector('.featured__list');
+const featuredContainer = $('.featured__list');
 fetch(`${apiDomain}${api.posts}`)
     .then(response => response.json())
     .then(data => {
@@ -92,7 +94,7 @@ fetch(`${apiDomain}${api.posts}`)
 
 // Mobile Show Navigation
 function showNav() {
-    const mainNav = document.querySelector('.main-nav__menu');
+    const mainNav = $('.main-nav__menu');
     if (!mainNav || !isMobile) return;
     if (mainNav.classList.contains('is-hidden')) {
         mainNav.classList.remove('is-hidden');
@@ -100,7 +102,7 @@ function showNav() {
         mainNav.classList.add('is-hidden');
     }
 }
-const logo = document.querySelector('.main-nav__logo');
+const logo = $('.main-nav__logo');
 if (logo) {
     logo.addEventListener('click', showNav);
 }
