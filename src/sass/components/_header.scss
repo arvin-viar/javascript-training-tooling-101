@@ -1,0 +1,99 @@
+.main-header {
+    position: relative;
+    padding: 10px 0;
+	background-color: #061a40;
+
+    .main-nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 15px;
+        &__logo {
+            max-height: 40px;
+        }
+        &__menu {
+            float: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: #11192d;
+            z-index: 1;
+            &.is-hidden {
+                display: none;
+            }
+            @include tablet {
+                display: flex;
+                position: static;
+                width: auto;
+                padding: 10px 18px;
+                background: none;
+                &.is-hidden {
+                    display: flex;
+                }
+            }
+            @include desktop {
+                display: flex;
+                position: static;
+                width: auto;
+                padding: 10px 18px;
+                background: none;
+                &.is-hidden {
+                    display: flex;
+                }
+            }
+        }
+        &__menu-list {
+            display: flex;
+            flex-direction: column;
+            @include tablet {
+                flex-direction: row;
+                align-items: center;
+            }
+            @include desktop {
+                flex-direction: row;
+                align-items: center;
+            }
+        }
+        &__menu-item {
+            a {
+                display: block;
+                padding: 10px 15px;
+                color: #006daa;
+                font-size: 14px;
+                text-transform: uppercase;
+                border-bottom: 1px solid #006daa;
+                &:hover {
+                    color: #b9d6f2;
+                }
+                @include tablet {
+                    padding: 0 15px;
+                    border-right: 1px solid #006daa;
+                    border-bottom: none;
+                }
+                @include desktop {
+                    padding: 0 15px;
+                    border-right: 1px solid #006daa;
+                    border-bottom: none;
+                }
+            }
+            &:last-child {
+                a {
+                    border: none;
+                }
+            }
+            &:first-child {
+                @include tablet {
+                    padding-left: 0;
+                }
+                @include desktop {
+                    padding-left: 0;
+                }
+            }
+            &-item--selected {
+                a {
+                    color: #b9d6f2;
+                }
+            }
+        }
+    }
+}
