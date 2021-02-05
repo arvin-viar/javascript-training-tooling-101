@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tooling 101</title>
+    <link type="text/css" rel="stylesheet" href="./dist/css/main.css">
+    <script src="./dist/js/bundle.js" defer></script>
+</head>
+
+<body>
+
+    <main role="main">
+        <aside class="preload-wrap">
+            <img class="loader" src="./src/images/loader.gif" alt="">
+        </aside>
+
+        <section class="posts">
+            <header class="posts__options">
+                <select name="sort" class="post-sort">
+                    <option value="none">Sort Posts</option>
+                    <option value="alphaAsc">Alphabetically Ascending</option>
+                    <option value="alphaDesc">Alphabetically Descending</option>
+                </select>
+                <select name="filter" class="post-filter" disabled>
+                    <option value="all">Select User</option>
+                </select>
+            </header>
+            <ul class="posts__list">
+
+            </ul>
+        </section>
+
+    </main>
+
+</body>
+
+</html>

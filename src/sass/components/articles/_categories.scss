@@ -1,0 +1,98 @@
+.categories {
+    margin-bottom: 30px;
+    &__header {
+        position: relative;
+        height: 250px;
+        color: #ffffff;
+        background: url(../../src/images/TechBG.jpg) no-repeat center center;
+        background-size: cover;
+        & > .container {
+            height: inherit;
+        }
+        &::before {
+            content: '';
+            width: 100%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0,0,0,0.5);
+        }
+        &-wrap {
+            position: relative;
+            height: 100%;
+        }
+        &-content {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(0, -50%);
+            padding: 0 15px;
+            color: #ffffff;
+            text-align: center;
+            h1 {
+                margin-bottom: 15px;
+                font-size: 3em;
+                text-transform: uppercase;
+            }
+        }
+    }
+    &__nav {
+        text-align: center;
+        background: #061a40;
+        &-menu {
+            display: flex;
+            overflow: auto;
+            background: none;
+            &-item {
+                display: inline-block;
+                vertical-align: middle;
+                a {
+                    display: flex;
+                    height: 100%;
+                    padding: 15px 20px;
+                    align-items: center;
+
+                    @include tablet {
+                        display: block;
+                        color: #e4e9f1;
+                    }
+                    @include desktop {
+                        display: block;
+                        color: #e4e9f1;
+                    }
+                }
+                &--active {
+                    background: #001233;
+                    a {
+                        color: #0466c8;
+                    }
+                }
+                @include tablet {
+                    display: block;
+                }
+                @include desktop {
+                    display: block;
+                }
+            }
+            @include tablet {
+                padding: 0 15px;
+            }
+            @include desktop {
+                padding: 0 15px;
+            }
+        }
+        @include tablet {
+            display: block;
+        }
+        @include desktop {
+            display: block;
+        }
+    }
+    @include tablet {
+        margin-bottom: 0;
+    }
+    @include desktop {
+        margin-bottom: 0;
+    }
+}

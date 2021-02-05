@@ -7,11 +7,14 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "ls -a",
     "build:css": "node-sass src/sass/main.scss dist/css/main.css",
+    "build:js": "rollup src/js/main.js --format iife --file dist/js/bundle.js",
     "watch:css": "node-sass -w -r src/sass/main.scss dist/css/main.css"
   },
   "author": "Arvin Viar (@arvin-viar) <arvin.viar@codeandtheory.com>",
   "license": "ISC",
   "dependencies": {
-    "node-sass": "^5.0.0"
+    "concurrently": "^5.3.0",
+    "node-sass": "^5.0.0",
+    "rollup": "^2.38.4"
   }
 }

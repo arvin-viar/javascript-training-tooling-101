@@ -1,0 +1,64 @@
+.curated {
+    margin-bottom: 30px;
+    &__list {
+        display: flex;
+        flex-direction: column;
+        @include tablet {
+            flex-wrap: wrap;
+            flex-direction: row;
+            padding: 15px 0;
+        }
+        @include desktop {
+            flex-wrap: wrap;
+            flex-direction: row;
+            padding: 15px 0;
+        }
+    }
+    &__item {
+        margin-bottom: 20px;
+        padding: 0 15px;
+        box-sizing: border-box;
+        &-wrap {
+            position: relative;
+            &::after {
+                content: "";
+                clear: both;
+                display: table;
+            }
+            img {
+                width: 100%;
+            }
+        }
+        &-details {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding: 15px;
+            background: rgba(6, 26, 64, 0.75);
+            box-sizing: border-box;
+            h3, p {
+                color: #ffffff;
+            }
+        }
+        @include tablet {
+            &:first-child {
+                flex: 1 0 100%;
+                margin-bottom: 30px;
+            }
+            margin-bottom: 0;
+            padding: 0 15px;
+            box-sizing: border-box;
+            flex: 1 0 50%;
+        }
+        @include desktop {
+            &:first-child {
+                flex: 1 0 100%;
+                margin-bottom: 30px;
+            }
+            margin-bottom: 0;
+            padding: 0 15px;
+            box-sizing: border-box;
+            flex: 1 0 50%;
+        }
+    }
+}

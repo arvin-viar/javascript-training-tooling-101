@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles - Tooling 101</title>
+    <link type="text/css" rel="stylesheet" href="./dist/css/main.css">
+    <script src="./dist/js/bundle.js" defer></script>
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="main-nav">
+                <img class="main-nav__logo" src="./src/images/gadget-logo-white.png" rel="site logo">
+                <nav class="main-nav__menu is-hidden">
+                    <ul class="main-nav__menu-list">
+                        <li class="main-nav__menu-item main-nav__menu-item--selected">
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="main-nav__menu-item">
+                            <a href="#">About Us</a>
+                        </li>
+                        <li class="main-nav__menu-item">
+                            <a href="#">Contact Us</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main role="main">
+
+        <!-- Categories -->
+        <section class="categories">
+            <header class="categories__header categories__header--cameras">
+                <div class="container">
+                    <div class="categories__header-wrap">
+                        <div class="categories__header-content">
+                            <h1 class="title">Cameras</h1>
+                            <p class="description">
+                                Suspendisse congue at nisl id sagittis. Etiam purus odio, pharetra vitae dui finibus,
+                                laoreet dignissim libero.
+                                Nunc hendrerit eros at gravida vehicula. Morbi molestie diam at sollicitudin porttitor.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <nav class="categories__nav">
+                <div class="container">
+                    <ul class="categories__nav-menu">
+                        <li class="categories__nav-menu-item categories__nav-menu-item--active">
+                            <a href="#">Cameras</a>
+                        </li>
+                        <li class="categories__nav-menu-item">
+                            <a href="#">Laptops</a>
+                        </li>
+                        <li class="categories__nav-menu-item">
+                            <a href="#">PC</a>
+                        </li>
+                        <li class="categories__nav-menu-item">
+                            <a href="#">Gaming Consoles</a>
+                        </li>
+                        <li class="categories__nav-menu-item">
+                            <a href="#">Smartphones</a>
+                        </li>
+                        <li class="categories__nav-menu-item">
+                            <a href="#">Tablets</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </section>
+        <!-- End Categories -->
+
+        <!-- Curated Start -->
+        <section class="curated">
+            <div class="container">
+                <ul class="curated__list">
+                    <li class="curated__item">
+                        <div class="curated__item-wrap">
+                            <img class="curated__item-image" src="./src/images/compact-cameras.jpg" alt="curate img" />
+                            <div class="curated__item-details">
+                                <h3>Lorem ipsum dolor</h3>
+                                <p>
+                                    Etiam purus odio, pharetra vitae dui finibus, laoreet dignissim libero...
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="curated__item">
+                        <div class="curated__item-wrap">
+                            <img class="curated__item-image" src="./src/images/cam-1.jpg" alt="curate img 1" />
+                            <div class="curated__item-details">
+                                <h3>Lorem ipsum dolor</h3>
+                                <p>
+                                    Etiam purus odio, pharetra vitae dui finibus, laoreet dignissim libero...
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="curated__item">
+                        <div class="curated__item-wrap">
+                            <img class="curated__item-image" src="./src/images/cam-2.jpg" alt="curate img 2" />
+                            <div class="curated__item-details">
+                                <h3>Lorem ipsum dolor</h3>
+                                <p>
+                                    Etiam purus odio, pharetra vitae dui finibus, laoreet dignissim libero...
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- Curated End -->
+
+        <!-- Content Start -->
+        <section class="articles">
+            <div class="container">
+                <div class="row">
+                    <header class="articles__header">
+                        <h1>Latest</h1>
+                        <div class="articles__header-options">
+                            <select name="sort" class="post-sort">
+                                <option value="none">Sort Posts</option>
+                                <option value="alphaAsc">Alphabetically Ascending</option>
+                                <option value="alphaDesc">Alphabetically Descending</option>
+                            </select>
+                            <select name="filter" class="post-filter" disabled>
+                                <option value="all">Select User</option>
+                            </select>
+                        </div>
+                    </header>
+                    <div class="articles__list">
+                        <aside class="articles__list-loader">
+                            <img class="loader" src="./src/images/loader.gif" alt="">
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Content End -->
+
+
+        <!-- <aside class="preload-wrap">
+            <img class="loader" src="./src/images/loader.gif" alt="">
+        </aside>
+
+        <section class="posts">
+            <header class="posts__options">
+                <select name="sort" class="post-sort">
+                    <option value="none">Sort Posts</option>
+                    <option value="alphaAsc">Alphabetically Ascending</option>
+                    <option value="alphaDesc">Alphabetically Descending</option>
+                </select>
+                <select name="filter" class="post-filter" disabled>
+                    <option value="all">Select User</option>
+                </select>
+            </header>
+            <ul class="posts__list">
+
+            </ul>
+        </section> -->
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <nav class="footer-nav">
+                <ul class="footer-nav__menu">
+                    <li class="footer-nav__menu-item">
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="footer-nav__menu-item">
+                        <a href="#">About Us</a>
+                    </li>
+                    <li class="footer-nav__menu-item">
+                        <a href="#">Contact Us</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,9 +1,9 @@
 .posts {
-    opacity: 1;
+    padding: 25px 0px;
     &__options {
         padding: 0 15px;
         margin-bottom: 15px;
-        
+
         select {
             width: 100%;
             margin: 0 0 15px;
@@ -49,6 +49,21 @@
             @include desktop {
                 flex: 0 0 32%;
             }
+        }
+    }
+}
+
+.post {
+    &__banner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 500px;
+        max-height: 500px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
         }
     }
 }
