@@ -7,7 +7,8 @@
     }
     &__item {
         display: flex;
-        margin-bottom: 30px;
+        flex-direction: column;
+        margin-bottom: 15px;
         & > * {
             flex: 1 1 0;
         }
@@ -28,8 +29,16 @@
         &-socials {
             display: none;
             position: absolute;
-            bottom: 20px;
-            left: 20px;
+            bottom: 5px;
+            left: 5px;
+            @include tablet {
+                bottom: 20px;
+                left: 20px;
+            }
+            @include desktop {
+                bottom: 20px;
+                left: 20px;
+            }
         }
         &-social {
             display: block;
@@ -38,32 +47,32 @@
             float: left;
             text-indent: -9999px;
             background: url(../../src/images/socials-sprite2.png);
-            .social--facebook {
+            &.social--facebook {
                 background-position: 0 50px;
             }
-            .social--facebook:hover,
-            .social--facebook:focus {
+            &.social--facebook:hover,
+            &.social--facebook:focus {
                 background-position: 0 100px;
             }
-            .social--twitter {
+            &.social--twitter {
                 background-position: 150px 50px;
             }
-            .social--twitter:hover,
-            .social--twitter:focus {
+            &.social--twitter:hover,
+            &.social--twitter:focus {
                 background-position: 151px 100px;
             }
-            .social--youtube {
+            &.social--youtube {
                 background-position: 50px 50px;
             }
-            .social--youtube:hover,
-            .social--youtube:focus {
+            &.social--youtube:hover,
+            &.social--youtube:focus {
                 background-position: 50px 100px;
             }
-            .social--pinterest {
+            &.social--pinterest {
                 background-position: 302px 50px;
             }
-            .social--pinterest:hover,
-            .social--pinterest:focus {
+            &.social--pinterest:hover,
+            &.social--pinterest:focus {
                 background-position: 302px 100px;
             }
         }
@@ -71,15 +80,22 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            padding: 15px 20px;
+            padding: 15px;
+            background:#e9ebf8;
             h1 {
                 margin-bottom: 10px;
-                font-size: 32px;
+                font-size: 22px;
                 font-weight: 700;
                 text-transform: capitalize;
+                @include tablet {
+                    font-size: 32px;
+                }
+                @include desktop {
+                    font-size: 32px;
+                }
             }
             p {
-                color: rgba(0, 0, 0, 0.3);
+                color: #333333;
             }
             &-category {
                 margin-bottom: 15px;
@@ -114,6 +130,59 @@
                     background-size: cover;
                 }
             }
+            @include tablet {
+                padding: 15px 20px;
+                background: none;
+            }
+            @include desktop {
+                padding: 15px 20px;
+                background: none;
+            }
+        }
+
+        @include tablet {
+            flex-direction: row;
+            margin-bottom: 30px;
+            & > * {
+                flex: 1 1 0;
+            }
+        }
+        @include desktop {
+            flex-direction: row;
+            margin-bottom: 30px;
+            & > * {
+                flex: 1 1 0;
+            }
         }
     }
 }
+
+/*
+.featured__item-imgwrap,
+.featured__item-details {
+    width: 100%;
+}
+.featured__item-details {
+    padding: 15px;
+    background:#e9ebf8;
+}
+.featured__item-socials {
+    bottom: 5px;
+    left: 5px;
+}
+.featured__item-details p {
+    color: #333333;
+}
+.featured__item-details h1 {
+    font-size: 22px;
+}
+.featured__item-details p.featured__item-details-posted {
+    margin: 0;
+}
+.featured__item:nth-child(odd) .featured__item-imgwrap {
+    order: 0;
+}
+.featured__item:nth-child(odd) .featured__item-details {
+    padding: 15px;
+}
+*/

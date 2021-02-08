@@ -1,9 +1,9 @@
-export function $(target) {
-    return document.querySelector(`${target}`);
+export function $(selector, context = document) {
+    return context.querySelector(`${selector}`);
 }
 
-export function $$(target) {
-    return document.querySelectorAll(`${target}`);
+export function $$(selector, context = document) {
+    return [...context.querySelectorAll(selector)];
 }
 
 export function isMobile() {
