@@ -18,8 +18,8 @@ import { $, renderFeaturedPosts } from "../utils/helpers";
         .then(response => response.json())
         .then(data => {
             featuredData.push(...data);
-            const lastIndex = featuredData.length - 1; 
-            const newData = featuredData.slice(lastIndex - 4);
+            const lastIndex = featuredData.length; 
+            const newData = featuredData.slice(lastIndex - 5);
             renderFeaturedPosts(newData.reverse(), featuredContainer);
         });
 
