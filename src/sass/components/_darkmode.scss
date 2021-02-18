@@ -1,0 +1,75 @@
+.dark-mode {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+    button {
+        width: 80px;
+        height: 40px;
+        margin: 0;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        background-image: url('../../src/images/sprite-dark-mode-80.png');
+        background-position: top;
+        text-indent: -9999px;
+        outline: none;
+        cursor: pointer;
+        &.active {
+            background-position: bottom;
+        }
+    }
+}
+
+.dark-theme {
+    color: #fefffe;
+    background: #061a40;
+
+    .main-header,
+    footer,
+    .categories__nav {
+        background: #000;
+    }
+
+    .main-nav {
+        &__menu-item {
+            a {
+                color: #a895f5;
+                border-color: #a895f5;
+                &:hover {
+                    color: #cdc7e5;
+                }
+            }
+        }
+    }
+
+    .featured__item-details-category,
+    .featured__item-details-posted,
+    .featured__item-details-author,
+    .featured__item-details-body {
+        color: #fefffe;
+    }
+    .featured__item-details {
+        color: #ffffff;
+        background: #33415c;
+        @include tablet {
+            background: none;
+        }
+        @include desktop {
+            background: none;
+        }
+    }
+
+
+    .categories__nav-menu-item {
+        a {
+            color: #463c78;
+        }
+        &--active {
+            background: #21175e;
+            a {
+                color: #cdc7e5;
+            }
+        }
+    }
+}

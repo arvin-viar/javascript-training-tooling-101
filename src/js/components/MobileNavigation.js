@@ -1,4 +1,4 @@
-import { $, isMobile } from "../utils/helpers";
+import { $, isMobile, toggleDarkMode } from "../utils/helpers";
 
 (() => {
 
@@ -19,6 +19,11 @@ import { $, isMobile } from "../utils/helpers";
     const logo = $('.main-nav__logo', $(SELECTOR));
     if (logo) {
         logo.addEventListener('click', showNav);
+    }
+
+    const darkMode = $('.dark-mode button', $(SELECTOR));
+    if (darkMode) {
+        darkMode.addEventListener('click', toggleDarkMode);
     }
 
 }) ();

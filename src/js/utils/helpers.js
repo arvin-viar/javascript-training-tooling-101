@@ -104,3 +104,16 @@ export function renderFeaturedPosts(arrPosts, container) {
     }).join('');
     container.innerHTML = postsHTML;
 }
+
+export function toggleActive(element) {
+    element.classList.toggle('active');
+}
+
+export function toggleDarkMode(e) {
+    const element = e.currentTarget;
+    const { body } = document;
+    const bodyClass = body.classList;
+    toggleActive(element);
+    body.classList.toggle('dark-theme');
+    console.log(bodyClass);
+}

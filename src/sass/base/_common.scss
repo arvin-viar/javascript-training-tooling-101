@@ -46,6 +46,9 @@ form {
         padding: 8px 10px;
     }
 }
+button {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
 .btn {
     display: inline-block;
     font-weight: 400;
@@ -62,5 +65,6 @@ form {
     font-size: 1rem;
     line-height: 1.5;
     border-radius: 0.25rem;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
     cursor: pointer;
 }
